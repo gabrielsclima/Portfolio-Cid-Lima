@@ -4,23 +4,72 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css" type="text/css">
-    <script src="script.js" defer></script>
-    <title>Aula de Música</title>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Aulas de música</title>
 </head>
 <body>
     <header>
-        <p>Cid Lima♪</p>
-        <nav id="navHeader">
-            <a href="">menu</a>
-            <a href="">aulas</a>
-            <a href="">história</a>
-            <a href="">contato</a>
+        <p>cid lima♪</p>
+        <nav>
+            <ul id="headerList">
+                <li class="navigation"><a href="#menu">menu</a></li>
+                <li class="navigation"><a href="#aulas">aulas</a></li>
+                <li class="navigation"><a href="#historia">história</a></li>
+                <li class="navigation"><a href="#conato">contato</a></li>
+            </ul>
         </nav>
     </header>
-    <section id="apresentacao">
-        <article>Há mais de trinta anos acompanhando artistas, produzindo gravações e aprimorando técnicas.</article>
-        <div><img src="images/cid1.jpg"></div>
-    </section>
+    <main>
+        <section class="menu firstSection" id="menu">
+            <article class="text">
+                <p>Há mais de trinta anos acompanhando artistas, produzindo gravações e aprimorando técnicas.<p>
+            </article>
+            <article class="cid">
+                <img src="images/cid1.jpg" width="500px" height="400px" alt="Guitarrista sentado em um sofá dentro de um estúdio. Ele está segurando uma guitarra de tom amarelado. Atrás dele, há uma parede com um tom de amarelo mais escuro. Na parte esquerda da foto, há um abafador de som.">
+            </article>
+        </section>
+        <section id="aulas">
+            <div id="firstColumn">
+                <article class="product">
+                    <img src="icons/violão.svg" alt="Um ícone simplificado de um violão">
+                    <p>violão</p>
+                </article>
+                <article class="product">
+                    <img src="icons/guitarra.svg" alt="Um ícone simplificado de um baixo">
+                    <p>guitarra</p>
+                </article>
+            </div>
+            <div id="secondColumn">
+                <article class="product">
+                    <img src="icons/teclado.svg" alt="Um ícone simplificado de um teclado musical">
+                    <p>teclado</p>
+                </article>
+                <article class="product">
+                    <img src="icons/baixo.svg" alt="Um ícone simplificado de um baixo">
+                    <p>baixo</p>
+                </article>
+                <article class="product">
+                    <img src="icons/bateria.svg" alt="Um ícone simplificado de uma bateria de percussão">
+                    <p>bateria</p>
+                </article>
+            </div>
+        </section>
+        <section id="historia">
+            <p>Um pouco da minha carreira</p>
+            <article>
+                <div class="buttonNav" id="moveLeft"></div>
+                <div class="buttonNav" id="moveRight"></div>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/kQLxKM56nG0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe width="450" height="315" src="https://www.youtube.com/embed/c0u6D0_jBlM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ZZ26cbEcw-c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/q3wVryo5Fkg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/o_QODVixpRk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/o2iBkEFMimY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Poqo5Zv7DXc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/dBV9c9tzRYs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/3jCJ3etLaO4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </article>
+        </section>
+    </main>
 </body>
 </html>
