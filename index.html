@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <script src="JS/script.js" defer></script>
     <title>Aulas de música</title>
 </head>
 <body>
@@ -12,17 +13,17 @@
         <p>cid lima♪</p>
         <nav>
             <ul id="headerList">
-                <li class="navigation"><a href="#menu">menu</a></li>
-                <li class="navigation"><a href="#aulas">aulas</a></li>
+                <li class="navigation"><a href="#">home</a></li>
+                <li class="navigation"><a href="#aulas">cursos</a></li>
                 <li class="navigation"><a href="#historia">história</a></li>
-                <li class="navigation"><a href="#conato">contato</a></li>
+                <li class="navigation"><a href="#contato">contato</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <section class="menu firstSection" id="menu">
             <article class="text">
-                <p>Há mais de trinta anos acompanhando artistas, produzindo gravações e aprimorando técnicas.<p>
+                <p><span style="font-size: 2rem">H</span>á mais de trinta anos acompanhando artistas, produzindo gravações e aprimorando técnicas.<p>
             </article>
             <article class="cid">
                 <img src="images/cid1.jpg" width="500px" height="400px" alt="Guitarrista sentado em um sofá dentro de um estúdio. Ele está segurando uma guitarra de tom amarelado. Atrás dele, há uma parede com um tom de amarelo mais escuro. Na parte esquerda da foto, há um abafador de som.">
@@ -30,46 +31,126 @@
         </section>
         <section id="aulas">
             <div id="firstColumn">
-                <article class="product">
+                <div class="productContainer">
+                    <article class="product" onclick="openModal(0)">
                     <img src="icons/violão.svg" alt="Um ícone simplificado de um violão">
                     <p>violão</p>
-                </article>
-                <article class="product">
-                    <img src="icons/guitarra.svg" alt="Um ícone simplificado de um baixo">
+                    </article>
+                </div>    
+                <div class="productContainer">
+                    <article class="product" onclick="openModal(1)">
+                    <img src="icons/guitarra.svg" alt="Um ícone simplificado de uma guitarra">
                     <p>guitarra</p>
-                </article>
+                    </article>
+                </div>    
             </div>
             <div id="secondColumn">
-                <article class="product">
+                <div class="productContainer">
+                    <article class="product" onclick="openModal(2)">
                     <img src="icons/teclado.svg" alt="Um ícone simplificado de um teclado musical">
                     <p>teclado</p>
-                </article>
-                <article class="product">
+                    </article>
+                </div>    
+                <div class="productContainer">
+                    <article class="product" onclick="openModal(3)">
                     <img src="icons/baixo.svg" alt="Um ícone simplificado de um baixo">
                     <p>baixo</p>
-                </article>
-                <article class="product">
+                    </article>
+                </div>    
+                <div class="productContainer">
+                    <article class="product" onclick="openModal(4)">
                     <img src="icons/bateria.svg" alt="Um ícone simplificado de uma bateria de percussão">
                     <p>bateria</p>
-                </article>
+                    </article>
+                </div>    
+                <div id="closeButton" onclick="closeModal(lastModal)"></div>
             </div>
         </section>
         <section id="historia">
             <p>Um pouco da minha carreira</p>
             <article>
-                <div class="buttonNav" id="moveLeft"></div>
-                <div class="buttonNav" id="moveRight"></div>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/kQLxKM56nG0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                <iframe width="450" height="315" src="https://www.youtube.com/embed/c0u6D0_jBlM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/ZZ26cbEcw-c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/q3wVryo5Fkg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/o_QODVixpRk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/o2iBkEFMimY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/Poqo5Zv7DXc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/dBV9c9tzRYs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/3jCJ3etLaO4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <div class="buttonNav" id="moveLeft" onclick="moveCarrosselLeft(93)"></div>
+                <div class="buttonNav" id="moveRight" onclick="moveCarrosselRight(-93)"></div>
+                <div id="carrossel">
+                    <iframe id="mainCarrossel" width="560" height="315" src="https://www.youtube.com/embed/kQLxKM56nG0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe width="450" height="315" src="https://www.youtube.com/embed/c0u6D0_jBlM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/ZZ26cbEcw-c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/q3wVryo5Fkg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/o_QODVixpRk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/o2iBkEFMimY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Poqo5Zv7DXc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/dBV9c9tzRYs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/3jCJ3etLaO4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
             </article>
         </section>
+        <section id="contato">
+            <p>se interessou?</p>
+            <form>
+                <legend>entre em contato pelas redes sociais, ou mande um e-mail</legend>
+                <div id="formContent">
+                    <label class="inputLabel">seu nome:</label>
+                    <input class="textBox" type="text" name="userName" id="userName" placeholder="Seu nome aqui..." required>
+                    <label class="inputLabel">seu melhor email:</label>
+                    <input class="textBox" type="email" name="userMail" id="userMail" placeholder="email@example.com" required>
+                    <label class="inputLabel">número de telefone:</label>
+                    <input class="textBox" type="tel" name="userNumber" id="userTelNumber" placeholder="+55 11 99999-9999" required>
+                    <input class="submitButton" type="submit" value="enviar">
+                </div>
+            </form>
+        </section>
     </main>
+    <div class="modalProduct" id="violao">
+        <div class="containerModalProduct">
+            <div class="iconModal">
+                <img src="icons/violão.svg" alt="Um ícone simplificado de um violão">
+            </div>
+            <div class="contentModal">
+                <p>Violão</p>
+                <br>
+                <p>um instrumento bem utilizado em acústicas e rica de técnicas. se está interessado em aprender este instrumento, clique no botão abaixo</p>
+            </div>
+        </div>
+    </div>
+    <div class="modalProduct" id="guitarra">
+        <div class="iconModal">
+            <img src="icons/guitarra.svg" alt="Um ícone simplificado de uma guitarra">
+        </div>
+        <div class="contentModal">
+            <p>Guitarra</p>
+            <br>
+            <p>clássico na era do rock, mas também é uma das composições de outros estilos como o Jazz. se está interessado em aprender este instrumento, clique no botão abaixo</p>
+        </div>
+    </div>
+    <div class="modalProduct" id="teclado">
+        <div class="iconModal">
+            <img src="icons/teclado.svg" alt="Um ícone simplificado de um teclado musical">
+        </div>
+        <div class="contentModal">
+            <p>Teclado</p>
+            <br>
+            <p>seu layout é como de um piano, mas o teclado é bem útil pra a composição de diferentes sons de instrumentos, além de possuir uma boa liberdade harmônica. se está interessado em aprender este instrumento, clique no botão abaixo</p>
+        </div>
+    </div>
+    <div class="modalProduct" id="baixo">
+        <div class="iconModal">
+            <img src="icons/baixo.svg" alt="Um ícone simplificado de um baixo">
+        </div>
+        <div class="contentModal">
+            <p>Baixo</p>
+            <br>
+            <p>mesmo não sendo tão perceptível de ouví-lo em algumas músicas, é um instrumento muito importante para uma composição. o baixista é responsável por definir o tom da música, além de aplicar um belo estilo a música.</p>
+        </div>
+    </div>
+    <div class="modalProduct" id="bateria">
+        <div class="iconModal">
+            <img src="icons/bateria.svg" alt="Um ícone simplificado de uma bateria de percussão">
+        </div>
+        <div class="contentModal">
+            <p>Bateria</p>
+            <br>
+            <p>As aulas ainda não estão disponíveis para este instrumento, mas em breve será disponibilizado. Caso tenha interesse, entre em contato clicando no link abaixo</p>
+        </div>
+    </div>
 </body>
 </html>
